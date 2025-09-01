@@ -1,0 +1,36 @@
+city
+: 
+"London"
+condition
+: 
+"Light rain"
+country
+: 
+"United Kingdom"
+feelslike_c
+: 
+16.2
+humidity
+: 
+82
+icon_url
+: 
+"https://cdn.weatherapi.com/weather/64x64/day/296.png"
+localtime
+: 
+"2025-09-01 09:07"
+region
+: 
+"City of London, Greater London"
+temperature_c
+: 
+16.2
+temperature_f
+: 
+61.2
+uv_index
+: 
+1.2
+wind_kph
+: 
+19.8

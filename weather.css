@@ -120,6 +120,12 @@ justify-content: center;
 align-items: center;
 cursor: pointer;
 }
+#exampleDataList{
+    border:2px solid var(--light-grey);
+}
+#exampleDataList:focus{
+box-shadow: none;
+}
 #parameter{
     display: grid;
     grid-template-columns:1fr 1fr 1fr;
