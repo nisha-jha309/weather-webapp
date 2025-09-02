@@ -1,7 +1,11 @@
 async function getWeather() {
        document.getElementById("search").addEventListener("click",async ()=>{
         let city = document.getElementById("cityname").value.trim().replace(" ","");
-        let country = document.getElementById("datalistOptions").value;
+        let country = document.getElementById("exampleDataList").value;
+        localStorage.setItem("city",city);
+        localStorage.setItem("country",country);
+        console.log(country);
+
      const url1 = `https://global-weather-api1.p.rapidapi.com/weather?city=${city},${country}`;
 const options = {
 	method: 'GET',
@@ -12,16 +16,12 @@ const options = {
 	}
 };
 
-const url2 = `https://global-weather-api1.p.rapidapi.com/forecast?city=${city}`;
     try {
       const response = await fetch(url1, options);
       const result = await response.json();
     console.log(result);
 
-    const response2= await fetch(url2,options);
-    const result2 =await response2.json();
-    console.log(result2);
-    
+    localStorage.setItem("weatherData", JSON.stringify(result)); 
 
     const temperatureImage=document.querySelector("#temperatureBox>img");
 
@@ -37,7 +37,11 @@ const url2 = `https://global-weather-api1.p.rapidapi.com/forecast?city=${city}`;
         temperatureImage.src="assets/hot-temperature.png";
     } else if(result.temperature_c>=35){
         temperatureImage.src="assets/high-temperature.png";
+    }else{
+        temperatureImage.src="assets/temperature.png"
     }
+
+
   document.getElementById("temperature").innerText=result.temperature_c+"°C";
     document.getElementById("feels-like").innerText="~"+result.feelslike_c+"°C";
    document.getElementById("humidity").innerText=result.humidity+"%";
@@ -50,7 +54,7 @@ document.getElementById("wind").innerText=0+"Km/h";
      alert("Please enter a city name!");
       return;
  }
-
+ 
   } catch (err) {
       console.error("Weather fetch failed:", err);
     }
@@ -60,3 +64,5 @@ document.getElementById("wind").innerText=0+"Km/h";
 }
 
 getWeather();
+
+
