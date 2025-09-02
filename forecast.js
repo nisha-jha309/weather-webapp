@@ -42,21 +42,31 @@ document.getElementById("uv").innerText=`${weatherdata.uv_index}`;
 
 
 
-result2[0].hour.forEach(element => {
+let hourlyHTML = "";
+for(let index=0;index<=2;index++){
+  hourlyHTML+=`<div class="forecast-criterias">
+        <p>HOURLY FORECAST</p>
+        <hr>
+        <div id="hourly">
+`;
+
+result2[index].hour.forEach(element => {
     console.log(element);
-    const timeParts = element.time.split(" "); // ["2025-09-02", "14:00"]
+    const timeParts = element.time.split(" "); 
   const hourTime = timeParts[1]; // "14:00"
-    document.getElementById("hourly").innerHTML+=`
+    hourlyHTML+=`
 <div class="hour">
 <p class="hour-time">${hourTime}</p>
 <img src="${element.condition.icon}"/>
 <p class="hour-condition">${element.condition.text}</p>
 </div>
-`
+`;
 })
 
-
-
+hourlyHTML+=`</div>
+</div>`;
+document.getElementById("hourly-weathers").innerHTML=hourlyHTML;
+} 
 
   } catch (err) {
       console.error("Weather fetch failed:", err);
