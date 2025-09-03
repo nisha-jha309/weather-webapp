@@ -45,7 +45,7 @@ document.getElementById("uv").innerText=`${weatherdata.uv_index}`;
 let hourlyHTML = "";
 for(let index=0;index<=2;index++){
   hourlyHTML+=`<div class="forecast-criterias">
-        <p>HOURLY FORECAST</p>
+        <p>HOURLY FORECAST (<span class="day-name"></span>)</p>
         <hr>
         <div id="hourly">
 `;
@@ -66,6 +66,22 @@ result2[index].hour.forEach(element => {
 hourlyHTML+=`</div>
 </div>`;
 document.getElementById("hourly-weathers").innerHTML=hourlyHTML;
+
+let Day=document.getElementsByClassName("day-name");
+
+for (let index=0;index<Day.length;index++){
+  const dateStr = result2[index].date; 
+const dateObj = new Date(dateStr);
+if(index===0){
+ Day[index].textContent="Today";
+}
+else if(index===1){
+ Day[index].textContent="Tomorrow";
+}
+else{
+Day[index].textContent=`${dateObj.toLocaleDateString("en-US",{weekday:"long"})}`;
+}
+}
 } 
 
   } catch (err) {
