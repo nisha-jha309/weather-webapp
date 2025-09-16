@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    const favorites=JSON.parse(localStorage.getItem("favorites"));
+    let favoriteDesitantions=document.getElementById("favorite-container");
+    favoriteDesitantion.innerHTML="";
+    favorites.forEach((favorite,index) => {
+        const card=document.createElement("div");
+        card.classList.add("favorite-destination");
+    favoriteDesitantion.innerHTML+=`
+    <div class="favorite-desitantion">
+ <button id="" onclick="removeFavorite(index)">X</button>
+  <div>${favorites.city},${favorites.country}</div>
+  <div>Region-${favorites.region}</div>
+  <div>${favorites.temperature}-${favorites.temperatureConditon}</div>
+  <div>Feels Like-${favorites.feelsLike}</div>
+
+
+
+    </div>
+    `;
+    });
+    function removeFavorite(index) {
+  favorites.splice(index, 1);
+  localStorage.setItem("favorites", JSON.stringify(favorites));
+  renderFavoriteCards();
+}
+    </script>
+</body>
+</html>

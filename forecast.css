@@ -47,20 +47,37 @@
   --btn-padding-lg: 0.8rem 1.6rem;   /* Large buttons (hero section) */
 
 }
-body{
-    background-color: grey;
-}
+
+ #ForeCast{
+    background: linear-gradient(135deg, 
+    #74ebd5,   /* aqua blue */
+    #4facfe,   /* light blue */
+    #00c6ff,   /* bright sky blue */
+    #0072ff,   /* deep blue */
+    #2e3b8e    /* indigo/navy */
+  );
+  font-family: 'Poppins', sans-serif;
+  padding: 50px 0;
+ }
 .forecast-criterias{
     padding: var(--btn-padding-lg);
     box-shadow: 0 0 4px;
-    width: 60%;
+    width: 90%;
     margin: 30px auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap:10px;
     border-radius: 18px;
-    background-color: var(--off-white);
+    /* background-color: var(--off-white); */
+    background-color: rgba(250, 238, 238, 0.659);
+    backdrop-filter: blur(0.5);
+}
+.forecast-criterias hr{
+    background-color: black;
+    border: none;
+    height: 0.8px;
+
 }
 #sun,#moon{
     display: flex;
