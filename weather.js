@@ -1,11 +1,15 @@
 async function getWeather() {
     document.getElementById("search").addEventListener("click", async () => {
         let city = document.getElementById("cityname").value.trim().replace(" ", "");
-        let country = document.getElementById("exampleDataList").value;
+        let Region_country_input = document.getElementById("exampleDataList").value;
+        const Region_country=Region_country_input.split(",");
+        let region=Region_country[0];
+        let country= Region_country[1];
         localStorage.setItem("city", city);
         localStorage.setItem("country", country);
+        localStorage.setItem("region",region)
 
-        const url1 = `https://global-weather-api1.p.rapidapi.com/weather?city=${city},${country}`;
+        const url1 = `https://global-weather-api1.p.rapidapi.com/weather?city=${city},${region},${country}`;
         const options = {
             method: 'GET',
             headers: {
@@ -33,7 +37,7 @@ async function getWeather() {
                 else if (result.temperature_c >= 20 && result.temperature_c <= 29) {
                     temperatureImage.src = "assets/normal-temperature.png";
                 } else if (result.temperature_c >= 30 && result.temperature_c <= 34) {
-                    temperatureImage.src = "assets/hot-temperature.png";
+                    temperatureImage.src = "assets/high-temperature.png";
                 } else if (result.temperature_c >= 35) {
                     temperatureImage.src = "assets/high-temperature.png";
                 } else {
@@ -53,7 +57,7 @@ async function getWeather() {
           const newFav = {
             city: city,
             country: country,
-            region: result.region,
+            region: region,
             feelsLike: result.feelslike_c,
             temperature: result.temperature_c,
             condition: result.condition,
@@ -64,7 +68,7 @@ async function getWeather() {
             favorites.push(newFav);
             localStorage.setItem("favorites", JSON.stringify(favorites));
             console.log(favorites);
-            alert(`${city}, ${country} added to favorites ✅`);
+            alert(`${city}, ${country} added to Favorites`);
           } else {
             alert("This city is already in favorites!");
           }

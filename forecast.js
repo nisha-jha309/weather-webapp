@@ -18,7 +18,6 @@ const url2 = `https://global-weather-api1.p.rapidapi.com/forecast?city=${citynam
         const response2= await fetch(url2,options);
     const result2 =await response2.json();
     console.log(result2);
-    
 
 document.getElementById("sunrise").innerHTML=`Rise: ${result2[0].astro.sunrise}`;
 document.getElementById("sunset").innerHTML=`Set: ${result2[0].astro.sunset}`;
@@ -33,13 +32,11 @@ document.getElementById("weatherIcon").src=`${result2[0].day.condition.icon}  `;
 document.getElementById("chances-of-rain").innerText=`${result2[0].day.daily_chance_of_rain}%`;
 
 
-document.getElementById("temperature").innerText=`${weatherdata.temperature_c}°C`;
-
-document.getElementById("feelslike").innerText=`feels like ${weatherdata.feelslike_c}°C`;
+document.getElementById("temperature").innerText=`${result2[0].day.avgtemp_c}°C`;
 
 
-document.getElementById("humidity").innerText=`${weatherdata.humidity}`;
-document.getElementById("uv").innerText=`${weatherdata.uv_index}`;
+document.getElementById("humidity").innerText=`${result2[0].day.avghumidity}`;
+document.getElementById("uv").innerText=`${result2[0].day.uv}`;
 
 
 
