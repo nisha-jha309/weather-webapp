@@ -4,33 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="favorites.css">
 </head>
 <body>
+    <div id="favorite-container"></div>
     <script>
     const favorites=JSON.parse(localStorage.getItem("favorites"));
+    console.log(favorites);
     let favoriteDesitantions=document.getElementById("favorite-container");
-    favoriteDesitantion.innerHTML="";
+    favoriteDesitantions.innerHTML="";
     favorites.forEach((favorite,index) => {
         const card=document.createElement("div");
         card.classList.add("favorite-destination");
-    favoriteDesitantion.innerHTML+=`
-    <div class="favorite-desitantion">
- <button id="" onclick="removeFavorite(index)">X</button>
-  <div>${favorites.city},${favorites.country}</div>
-  <div>Region-${favorites.region}</div>
-  <div>${favorites.temperature}-${favorites.temperatureConditon}</div>
-  <div>Feels Like-${favorites.feelsLike}</div>
-
-
-
-    </div>
+    card.innerHTML=`
+ <button class="remove-favorite-btn">X</button>
+  <div class="favorite-city-country">${favorite.city},${favorite.country}</div>
+     <div class="favorite-region">Region-${favorite.region}</div>
+  <div class="favorite-temperature-condition">${favorite.temperature}°C-${favorite.condition}</div>
+  <div class="favorite-feelsLike">Feels Like-${favorite.feelsLike}°C</div>
+  <a href="forecast.html" class="see-favorite-forecast">See full Forecast</a>
     `;
-    });
-    function removeFavorite(index) {
-  favorites.splice(index, 1);
+    
+favoriteDesitantions.appendChild(card);
+
+card.querySelector(".remove-favorite-btn").onclick=()=>{
+ favorites.splice(index, 1);
   localStorage.setItem("favorites", JSON.stringify(favorites));
-  renderFavoriteCards();
+  location.reload();
 }
+  
+card.querySelector(".see-favorite-forecast").onclick=()=>{
+    localStorage.setItem("city",favorite.city);
+    localStorage.setItem("country",favorite.country);
+}
+    });
+    
     </script>
 </body>
 </html>

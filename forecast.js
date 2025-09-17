@@ -30,12 +30,13 @@ document.getElementById("moonset").innerText=`Set: ${result2[0].astro.moonset}`;
 
 document.getElementById("condition").innerText=`${result2[0].day.condition.text}   `;
 document.getElementById("weatherIcon").src=`${result2[0].day.condition.icon}  `;
+document.getElementById("chances-of-rain").innerText=`${result2[0].day.daily_chance_of_rain}%`;
+
 
 document.getElementById("temperature").innerText=`${weatherdata.temperature_c}°C`;
 
 document.getElementById("feelslike").innerText=`feels like ${weatherdata.feelslike_c}°C`;
 
-document.getElementById("chances-of-rain").innerText=`${result2[0].day.daily_chance_of_rain}%`;
 
 document.getElementById("humidity").innerText=`${weatherdata.humidity}`;
 document.getElementById("uv").innerText=`${weatherdata.uv_index}`;

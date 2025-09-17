@@ -151,3 +151,8 @@ box-shadow: none;
     height: auto;
     object-fit: cover;
 }
+#addtoFav-btn{
+    color:var(--off-white);
+    z-index: 3;
+    text-align: center;
+}

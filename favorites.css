@@ -1,0 +1,46 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+#favorite-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 30px;
+    padding: 50px;
+}
+
+.favorite-destination{
+    border-radius: 9px;
+    position: relative;
+    padding: 30px;
+    background-color:white;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.187);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+.favorite-region,.favorite-temperature-condition,.favorite-feelsLike{
+    font-size:18px;
+    font-weight: 500;
+}
+.favorite-city-country{
+    font-size: 28px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+.remove-favorite-btn{
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    width: 30px;
+    height: 30px;
+    display: grid;
+    place-content: center;
+    border-radius: 50%;
+    background-color: rgba(128, 128, 128, 0.229);
+    padding: 10px;
+    border:none;
+}
