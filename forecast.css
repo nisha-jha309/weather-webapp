@@ -47,6 +47,27 @@
   --btn-padding-lg: 0.8rem 1.6rem;   /* Large buttons (hero section) */
 
 }
+#nav{
+    background-color: var(--off-white);
+    padding: var(--btn-padding-lg);
+    box-shadow: 0 0 3px black;
+        z-index: 10000;
+        position:sticky;
+        top:0;
+        left: 0;
+        width: 100%;
+}
+.navbar-brand{
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    text-decoration: none !important;
+}
+.navbar-brand>span{
+   font-size: var(--font-lg);
+  font-weight: 600;
+  color: black;
+}
 
  #ForeCast{
     background: linear-gradient(135deg, 

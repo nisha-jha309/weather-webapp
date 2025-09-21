@@ -52,6 +52,10 @@
     padding: var(--btn-padding-lg);
     box-shadow: 0 0 3px black;
         z-index: 10000;
+        position:sticky;
+        top:0;
+        left: 0;
+        width: 100%;
 }
 .navbar-brand{
     display: flex;
