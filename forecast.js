@@ -2,7 +2,8 @@ async function getForeCast() {
 const options = {
 	method: 'GET',
 	headers: {
-		'x-rapidapi-key': 'eacb455dd7msh6dde57f899592adp13dde7jsn9df9e9f7391c',
+		// 'x-rapidapi-key': 'eacb455dd7msh6dde57f899592adp13dde7jsn9df9e9f7391c',
+    		'x-rapidapi-key': '0895e72151mshb046b57d01ddb8dp1bb990jsnf5c87e44c54d',
 		'x-rapidapi-host': 'global-weather-api1.p.rapidapi.com',
 		'x-api-key': '29gcWxc1xHP498ntsy'
 	}
