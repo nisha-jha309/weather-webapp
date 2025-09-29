@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="about.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/solid.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <title>weather App</title>
+</head>
+<body>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary" id="nav">
+  <div class="container-fluid">
+    <a class="navbar-brand text-decoration-none" href="#">
+      <img src="assets/weather.png" alt="Logo" width="40" height="34" class="d-inline-block">
+      <span>WeatherNow</span>
+    </a>
+     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+     <div class="collapse navbar-collapse"id="navbarNav">
+      <ul class="navbar-nav ms-auto gap-4 fw-semibold">
+        <li class="nav-item">
+<input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Region,Country" id="region-country-input">
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="weather.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="forecast.html">ForeCast</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="favorites.html">Favorites</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    <section id="about">
+        <div id="about-text">
+            <h2>WeatherNow</h2>
+            <p>WeatherNow is a modern web application that delivers real-time weather updates through a clean and responsive design. It provides accurate three-day forecasts along with detailed hourly predictions, helping users plan their day with confidence. The application enhances clarity by displaying precise location information including the city, region, and country. With its glassmorphism-inspired interface, WeatherNow combines reliability with a modern and engaging user experience.</p>
+        </div>
+        <div id="about-container">
+            <div class="about-card">
+                <h2 class="cardTitle">Features</h2>
+                <ul id="features">
+                    <li>Real-time weather updates</li>
+                    <li>Hourly & 3-day forecast</li>
+                    <li>City-based search</li>
+                    <li>Favorites for quick access</li>
+                    <li>Glassmorphism UI & gradient theme</li>
+                </ul>
+            </div>
+            <div class="about-card">
+                <h2 class="cardTitle">Technology Used</h2>
+                <ul id="technology">
+                    <li><strong>Frontend:</strong> HTML, CSS, JavaScript</li>
+                    <li><strong>Styling:</strong> Responsive Design, Flexbox/Grid</li>
+                    <li><strong>API:</strong> WeatherAPI</li>
+                </ul>
+            </div>
+            <div class="about-card">
+                <h2 class="cardTitle">Purpose</h2>
+                <p>This project demonstrates my ability to build interactive web apps, integrate third-party APIs, and implement modern UI/UX. It highlights responsive layouts, state handling, and user-friendly design.</p>
+            </div>
+        </div>
+            <p style="text-align:center;">Made by ❤️ Nisha </p>
+
+    </section>
+</body>
+</html>

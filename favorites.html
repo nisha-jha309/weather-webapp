@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="favorites.css">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+     <nav class="navbar navbar-expand-lg bg-body-tertiary" id="nav">
+  <div class="container-fluid">
+    <a class="navbar-brand text-decoration-none" href="weather.html">
+      <img src="assets/weather.png" alt="Logo" width="40" height="34" class="d-inline-block">
+      <span>WeatherNow</span>
+    </a>
+     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+     <div class="collapse navbar-collapse"id="navbarNav">
+      <ul class="navbar-nav ms-auto gap-4 fw-semibold">
+        <li class="nav-item">
+<input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Region,Country" id="region-country-input">
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="weather.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="forecast.html">ForeCast</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="favorites.html">Favorites</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    <div id="favorite-container"></div>
+    <script>
+    const favorites=JSON.parse(localStorage.getItem("favorites"));
+    console.log(favorites);
+    let favoriteDesitantions=document.getElementById("favorite-container");
+    favoriteDesitantions.innerHTML="";
+    favorites.forEach((favorite,index) => {
+        const card=document.createElement("div");
+        card.classList.add("favorite-destination");
+    card.innerHTML=`
+ <button class="remove-favorite-btn">X</button>
+  <div class="favorite-city-country">${favorite.city},${favorite.country}</div>
+     <div class="favorite-region">Region-${favorite.region}</div>
+  <div class="favorite-temperature-condition">${favorite.temperature}°C-${favorite.condition}</div>
+  <div class="favorite-feelsLike">Feels Like-${favorite.feelsLike}°C</div>
+  <a href="forecast.html" class="see-favorite-forecast">See full Forecast</a>
+    `;
+    
+favoriteDesitantions.appendChild(card);
+
+card.querySelector(".remove-favorite-btn").onclick=()=>{
+ favorites.splice(index, 1);
+  localStorage.setItem("favorites", JSON.stringify(favorites));
+  location.reload();
+}
+  
+card.querySelector(".see-favorite-forecast").onclick=()=>{
+    localStorage.setItem("city",favorite.city);
+    localStorage.setItem("country",favorite.country);
+}
+    });
+    
+    </script>
+</body>
+</html>

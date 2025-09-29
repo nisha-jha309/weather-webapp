@@ -1,0 +1,162 @@
+:root {
+    --Sky-Blue-Primary: #87CEEB;
+    --Deep-Sky-Blue-Bright: #00BFFF;
+    --Light-Sky-Blue: #87CEFA
+
+     --pure-white: #FFFFFF;
+  --off-white: #F9FAFB;
+  --snow-white: #FFFAFA;
+
+  --light-grey: #D3D3D3;
+  --medium-grey: #A9A9A9;
+  --dark-grey: #333333;
+
+
+  /* font sizes */
+
+  --font-xxs: 0.75rem;   /* 12px */
+  --font-xs: 0.875rem;   /* 14px */
+  --font-sm: 1rem;       /* 16px (base text) */
+  --font-md: 1.125rem;   /* 18px */
+  --font-lg: 1.25rem;    /* 20px */
+  --font-xl: 1.5rem;     /* 24px */
+  --font-xxl: 2rem;      /* 32px */
+  --font-xxxl: 3rem;     /* 48px */
+
+  /* button colors */
+  --btn-primary-bg: #00BFFF;     /* Deep Sky Blue */
+  --btn-primary-text: #FFFFFF;   /* White text */
+  --btn-primary-hover: #009ACD;  /* Slightly darker blue */
+
+  --btn-secondary-bg: #87CEEB;   /* Sky Blue */
+  --btn-secondary-text: #333333; /* Dark Grey text */
+  --btn-secondary-hover: #5AB0D8;/* Darker sky blue */
+
+  --btn-disabled-bg: #CCCCCC;    /* Light Grey */
+  --btn-disabled-text: #666666;  /* Medium Grey */
+
+  /* paddings */
+--btn-padding-sm: 0.4rem 0.8rem;   /* Small buttons (mobile, icons) */
+  --btn-padding-md: 0.6rem 1.2rem;   /* Normal buttons */
+  --btn-padding-lg: 0.8rem 1.6rem;   /* Large buttons (hero section) */
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins",sans-serif;
+}
+#nav{
+    background-color: var(--off-white);
+    padding: var(--btn-padding-lg);
+    box-shadow: 0 0 3px black;
+        z-index: 10000;
+        position:sticky;
+        top:0;
+        left: 0;
+        width: 100%;
+}
+.navbar-brand{
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    text-decoration: none !important;
+}
+.navbar-brand>span{
+   font-size: var(--font-lg);
+  font-weight: 600;
+  color: black;
+}
+
+/* hero */
+#hero-section{
+    background-image: url('assets/gradient-background.jpg');
+    height:90vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    place-content: center;
+}
+#hero-section-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.371);
+}
+#hero-section-text{
+    z-index: 2;
+}
+#city-search {
+    background-color: transparent;
+    border: 1px solid var(--snow-white);
+    border-radius: 18px;
+    font-weight: 600;
+    display: flex;
+    max-width: 500px;
+    overflow: hidden;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.591);
+    margin: 0 auto;
+}
+#hero-section-text input{
+    background-color: transparent;
+    padding: var(--btn-padding-lg);
+    border-radius:18px 0 0 18px;
+    border: none;
+    color: var(--snow-white);
+        flex-grow:1;
+        outline: none;
+
+}
+#hero-section-text input::placeholder{
+    color: var(--off-white);
+}
+#search{
+    color: var(--dark-grey);
+    width: 50px;
+    padding: var(--btn-padding-lg);
+    background-color: var(--snow-white);
+    border-radius: 0 18px 18px 0;
+display: flex;
+justify-content: center;
+align-items: center;
+cursor: pointer;
+}
+#exampleDataList{
+    border:2px solid var(--light-grey);
+}
+#exampleDataList:focus{
+box-shadow: none;
+}
+#parameter{
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap: 30px;
+    margin: 40px auto 40px auto;
+}
+.parameter-box{
+    background-color: var(--off-white);
+    height:200px;
+    border-radius: 18px;
+    padding: var(--btn-padding-lg);
+    display:flex;
+    flex-direction: column;
+    gap:20px;
+    justify-content: center;
+    align-items: center;
+}
+.parameter-box-text h2{
+    font-size: 24px;
+}
+.parameter-box img{
+    width: 80px;
+    height: auto;
+    object-fit: cover;
+}
+#addtoFav-btn{
+    color:var(--off-white);
+    z-index: 3;
+    text-align: center;
+}

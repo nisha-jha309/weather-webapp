@@ -1,0 +1,209 @@
+0
+: 
+astro: {
+is_moon_up
+: 
+0
+is_sun_up
+: 
+0
+moon_illumination
+: 
+57 
+moon_phase
+: 
+"Waxing Gibbous"
+moonrise
+: 
+"02:02 PM"
+moonset
+: 
+"12:00 AM"
+sunrise
+: 
+"05:51 AM"
+sunset
+: 
+"06:35 PM"}
+date
+: 
+"2025-09-01"
+date_epoch
+: 
+1756684800
+day
+: 
+avghumidity
+: 
+95
+avgtemp_c: 20.8
+avgtemp_f: 69.4
+avgvis_km: 8.8
+avgvis_miles: 5
+condition: {text: 'Heavy rain', icon: '//cdn.weatherapi.com/weather/64x64/day/308.png', code: 1195}
+daily_chance_of_rain: 99
+daily_chance_of_snow: 0
+daily_will_it_rain: 1
+daily_will_it_snow: 0
+maxtemp_c: 22.3
+maxtemp_f: 72.2
+maxwind_kph: 9.7
+maxwind_mph: 6
+mintemp_c: 19.1
+mintemp_f: 66.3
+totalprecip_in: 2.14
+totalprecip_mm: 54.44
+totalsnow_cm: 0
+uv: 0.2
+[[Prototype]]
+: 
+Object
+hour
+: 
+Array(24)
+0
+: 
+chance_of_rain
+: 
+60
+chance_of_snow: 0
+cloud: 94
+condition: {text: 'Patchy rain nearby', icon: '//cdn.weatherapi.com/weather/64x64/night/176.png', code: 1063}
+dewpoint_c: 21.8
+dewpoint_f: 71.3
+feelslike_c: 25.7
+feelslike_f
+: 
+78.3
+gust_kph: 13.8
+gust_mph: 8.6
+heatindex_c: 25.7
+heatindex_f: 78.3
+humidity: 90
+is_day: 0
+precip_in: 0
+precip_mm
+: 
+0.04
+pressure_in
+: 
+29.66
+pressure_mb
+: 
+1004
+snow_cm
+: 
+0
+temp_c
+: 
+23.5
+temp_f
+: 
+74.3
+time
+: 
+"2025-09-01 00:00"
+time_epoch
+: 
+1756665000
+uv
+: 
+0
+vis_km
+: 
+10
+vis_miles: 6
+will_it_rain: 0
+will_it_snow: 0
+wind_degree: 65
+wind_dir: "ENE"
+wind_kph: 7.6
+wind_mph: 4.7
+windchill_c: 23.5
+windchill_f: 74.3
+[[Prototype]]
+: 
+Object
+1
+: 
+{time_epoch: 1756668600, time: '2025-09-01 01:00', temp_c: 23.4, temp_f: 74.2, is_day: 0, …}
+2
+: 
+{time_epoch: 1756672200, time: '2025-09-01 02:00', temp_c: 23.3, temp_f: 73.9, is_day: 0, …}
+3
+: 
+{time_epoch: 1756675800, time: '2025-09-01 03:00', temp_c: 19.8, temp_f: 67.6, is_day: 0, …}
+4
+: 
+{time_epoch: 1756679400, time: '2025-09-01 04:00', temp_c: 19.7, temp_f: 67.4, is_day: 0, …}
+5
+: 
+{time_epoch: 1756683000, time: '2025-09-01 05:00', temp_c: 19.6, temp_f: 67.2, is_day: 0, …}
+6
+: 
+{time_epoch: 1756686600, time: '2025-09-01 06:00', temp_c: 19.3, temp_f: 66.8, is_day: 1, …}
+7
+: 
+{time_epoch: 1756690200, time: '2025-09-01 07:00', temp_c: 19.3, temp_f: 66.8, is_day: 1, …}
+8
+: 
+{time_epoch: 1756693800, time: '2025-09-01 08:00', temp_c: 19.2, temp_f: 66.6, is_day: 1, …}
+9
+: 
+{time_epoch: 1756697400, time: '2025-09-01 09:00', temp_c: 19.1, temp_f: 66.3, is_day: 1, …}
+10
+: 
+{time_epoch: 1756701000, time: '2025-09-01 10:00', temp_c: 19.2, temp_f: 66.6, is_day: 1, …}
+11
+: 
+{time_epoch: 1756704600, time: '2025-09-01 11:00', temp_c: 19.5, temp_f: 67.1, is_day: 1, …}
+12
+: 
+{time_epoch: 1756708200, time: '2025-09-01 12:00', temp_c: 19.5, temp_f: 67.1, is_day: 1, …}
+13
+: 
+{time_epoch: 1756711800, time: '2025-09-01 13:00', temp_c: 19.8, temp_f: 67.7, is_day: 1, …}
+14
+: 
+{time_epoch: 1756715400, time: '2025-09-01 14:00', temp_c: 19.3, temp_f: 66.8, is_day: 1, …}
+15
+: 
+{time_epoch: 1756719000, time: '2025-09-01 15:00', temp_c: 19.1, temp_f: 66.3, is_day: 1, …}
+16
+: 
+{time_epoch: 1756722600, time: '2025-09-01 16:00', temp_c: 20.7, temp_f: 69.2, is_day: 1, …}
+17
+: 
+{time_epoch: 1756726200, time: '2025-09-01 17:00', temp_c: 22.3, temp_f: 72.2, is_day: 1, …}
+18
+: 
+{time_epoch: 1756729800, time: '2025-09-01 18:00', temp_c: 22.2, temp_f: 71.9, is_day: 1, …}
+19
+: 
+{time_epoch: 1756733400, time: '2025-09-01 19:00', temp_c: 22.3, temp_f: 72.1, is_day: 0, …}
+20: {time_epoch: 1756737000, time: '2025-09-01 20:00', temp_c: 22.3, temp_f: 72.1, is_day: 0, …}
+21: {time_epoch: 1756740600, time: '2025-09-01 21:00', temp_c: 22.2, temp_f: 72, is_day: 0, …}
+22
+: 
+{time_epoch: 1756744200, time: '2025-09-01 22:00', temp_c: 22.2, temp_f: 72, is_day: 0, …}
+23: {time_epoch: 1756747800, time: '2025-09-01 23:00', temp_c: 22.2, temp_f: 71.9, is_day: 0, …}
+length: 24
+[[Prototype]]
+: 
+Array(0)
+[[Prototype]]
+: 
+Object
+1
+: 
+{date: '2025-09-02', date_epoch: 1756771200, day: {…}, astro: {…}, hour: Array(24)}
+2
+: 
+{date: '2025-09-03', date_epoch: 1756857600, day: {…}, astro: {…}, hour: Array(24)}
+length
+: 
+3
+[[Prototype]]
+: 
+Array(0)
+﻿
